@@ -81,6 +81,9 @@ class StartQT4(QMainWindow):
         if QSystemTrayIcon.isSystemTrayAvailable() and not self.cli:
             self.systemtray = Systray(self)
 
+        if self.cli:
+            quit()
+
     def commandline_options(self):
         self.cli = False
         """Set up the command line options."""
